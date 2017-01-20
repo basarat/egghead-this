@@ -1,4 +1,4 @@
 function foo() {
-  console.log(this === module);
+  console.log(this === global);
 }
-foo(); 
+foo();

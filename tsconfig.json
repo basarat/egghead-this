@@ -4,7 +4,13 @@
       "es6",
       "dom"
     ],
-    "outDir": "lib"
+    "outDir": "lib",
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
   "include": [
     "src"
