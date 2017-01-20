@@ -1,4 +1,10 @@
 function foo() {
-  console.log(this === global);
+  console.log({
+    'global?': this === global,
+    'bar?': this === bar,
+  });
 }
-foo();
+
+const bar = { foo };
+bar.foo(); // bar 
+foo(); // global
