@@ -1,0 +1,17 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "private": true,
+  "devDependencies": {
+    "@types/node": "^7.0.0"
+  },
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/basarat/"
+}
