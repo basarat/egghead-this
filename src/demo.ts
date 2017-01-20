@@ -1,7 +1,7 @@
-function foo() {
+function foo(this: any) {
   console.log({
     'global?': this === global,
-    'bar?': this === bar,
+    'bar?': this === bar
   });
 }
 

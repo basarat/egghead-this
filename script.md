@@ -6,7 +6,7 @@ function foo() {
 }
 foo();
 ```
-If I go ahead and call this function from the root of the file you can see that it is actually the nodejs global variable. I can prove this by simply checking if this is equal to global and it is.
+If I go ahead and call this function from the root of the file you can see that this actually points to the nodejs global variable. I can prove this by simply checking if this is equal to global and it is.
 
 ```
 function foo() {
@@ -25,13 +25,12 @@ function foo() {
     'bar?': this === bar,
   });
 }
-foo();
 
 const bar = { foo };
 bar.foo();
 ```
 
-Ad because it changes its meaning based on how the function is called, it is quite commonly called as the *calling context*.
+This is because for simple functions in JavaScript and TypeScirpt the value of `this` changes based on how the function is called.
 
 ```
 function foo() {
@@ -46,3 +45,4 @@ bar.foo(); // bar
 foo(); // global
 ```
 
+That is why there is a compiler option called noImplicitThis and as soon as you set that to true, such unsafe usages of `this` immediately becomes errors. And if you still want the unsafe behavior you are free to annotate this as any for a particular function and you can see that the errors go away.

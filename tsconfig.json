@@ -1,9 +1,38 @@
 {
   "compilerOptions": {
+    "noImplicitThis": true,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     "lib": [
       "es6",
       "dom"
     ],
+
     "outDir": "lib",
     "types": [
       "node"
